@@ -1,0 +1,186 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ }
+ body {
+   background-color: #54c3ef;
+   position: relative;
+   top: 0;
+ }
+ .container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   background-color: white;
+   max-width: 1000px;
+   height: 500px;
+   margin: 0px auto;
+   margin-top: 60px;
+   padding: 50px 0px;
+   border-radius: 20px;
+   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6);
+ }
+ .btn {
+   border-bottom: 2px solid #dddddd;
+   width: 100%;
+   height: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 0 40px 0;
+   
+ }
+ #custom-btn {
+  
+   font-size: 16px;
+   color: black;
+   padding: 3px 10px;
+   background-color: #f8e5e5;
+   border-color: #dddddd;
+   margin: 0px auto;
+   letter-spacing: 0.2px;
+   outline: none;
+   text-decoration: none;
+   font-weight: bold;
+   border: none;
+   border-radius: 0.3em;
+   text-transform: uppercase;
+   box-shadow: 0px 2px 4px black;
+ }
+ 
+ .btn-styles {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   padding: 0 20px;
+   margin: 20px auto;
+   width: 100%;
+   height: 100%;
+ }
+ .input,
+ label {
+   margin: 10px;
+   font-size: 18px;
+ }
+ input {
+   height: 30px;
+   background: transparent;
+   border: none;
+   outline: none;
+   border-bottom: 1px solid #dddddd;
+ }
+ .color {
+   border: none;
+ }
+ .generate-btn {
+   border-top: 2px solid #dddddd;
+   width: 100%;
+   height: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 40px 0 0 0;
+ }
+ .generate-btn button {
+   cursor: pointer;
+   letter-spacing: 2px;
+   font-size: 20px;
+   padding: 10px 20px;
+   color: black;
+   border: 1px solid #5352ed;
+   background-color: transparent;
+   margin: 0px auto;
+   border-radius: 4px;
+   transition: ease 0.5s;
+   box-shadow: 2px 2px 4px black;
+ }
+ .generate-btn button:hover {
+   background-color: #1e90ff;
+   color: white;
+   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+ }
+ 
+ @media (max-width: 768px) {
+   .container {
+     height: auto;
+     margin-bottom: 60px;
+   }
+   .btn-styles div {
+     display: block;
+   }
+   .input {
+     width: 100%;
+   }
+   .color {
+     width: 100%;
+   }
+ }
+ 
+ .modal {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   transition: 200ms ease-in-out;
+   border: 1px solid black;
+   z-index: 10;
+   background-color: white;
+   width: 800px;
+   max-width: 80%;
+ }
+ .modal.active {
+   transform: translate(-50%, -50%) scale(1);
+ }
+ .modal-header {
+   padding: 10px 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 2px solid #dddddd;
+ }
+ 
+ .modal-header .title {
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: coral;
+ }
+ 
+ .modal-header .close {
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background: none;
+   font-size: 2rem;
+   font-weight: bold;
+ }
+ .modal-header .close:hover {
+   color: coral;
+ }
+ .modal-body {
+   padding: 10px 15px;
+ }
+ .modal-body p {
+   padding: 20px 0;
+   font-size: 20px;
+   line-height: 30px;
+ }
+ #overlay {
+   position: fixed;
+   opacity: 0;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+   pointer-events: none;
+ }
+ #overlay.active {
+   opacity: 1;
+   pointer-events: all;
+ }
+ 
